@@ -3,8 +3,11 @@ import {
   FormControlLabel,
   FormLabel,
   Grid,
+  InputLabel,
+  MenuItem,
   Radio,
   RadioGroup,
+  Select,
   TextField,
 } from "@mui/material";
 import React, { useState } from "react";
@@ -15,7 +18,7 @@ export default function EmployeeForm() {
     root: {
       "& .MuiFormControl-root": {
         width: "80%",
-        margin: theme.spacing(1),
+        margin: 8,
       },
     },
   }));
@@ -73,6 +76,21 @@ export default function EmployeeForm() {
               <FormControlLabel value="other" control={<Radio />} label="Other" />
             </RadioGroup>
           </FormControl>
+        </Grid>
+        <Grid item xs={6}>
+        <InputLabel id="demo-simple-select-label">Age</InputLabel>
+  <Select
+    labelId="demo-simple-select-label"
+    id="demo-simple-select"
+    value={values.mobile}
+    label="Age"
+    name="mobile"
+    onChange={handleInputChange}
+  >
+    <MenuItem value={10}>Ten</MenuItem>
+    <MenuItem value={20}>Twenty</MenuItem>
+    <MenuItem value={30}>Thirty</MenuItem>
+  </Select>
         </Grid>
       </Grid>
     </form>

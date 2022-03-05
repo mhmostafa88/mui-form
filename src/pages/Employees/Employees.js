@@ -5,8 +5,8 @@ import EmployeeForm from "./EmployeeForm.js";
 
 const useStyles = makeStyles(theme => ({
   pageContent: {
-    margin: theme.spacing(5),
-    padding: theme.spacing(2)
+    margin: 20,
+    padding: 16
   }
 }))
 
