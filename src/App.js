@@ -2,9 +2,11 @@ import "./App.css";
 import { CssBaseline } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import Employees from "./pages/Employees/Employees.js";
-import SideMenu from "./components/SideMenu";
+import SideMenuMUI from "./components/Navbar/SideMenuMUI";
+
 import Header from "./components/Header";
 import StyledPaperExample from "./components/StyledPaper.tsx";
+import SideMenu from "./components/Navbar/SideMenuReact";
 
 
 const useStyles = makeStyles({

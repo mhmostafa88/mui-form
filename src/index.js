@@ -7,13 +7,23 @@ import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
 import { red } from '@mui/material/colors';
 import theme from './theme';
 import APP2 from './APP2';
-
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from 'react-router-dom';
+import TravelDestinations from './pages/TravelDestinations';
 
 
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-    <App />
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="/destinations" element={<TravelDestinations />} />
+    </Routes>
+  </BrowserRouter>
     </ThemeProvider>
     {/* <APP2 /> */}
   </React.StrictMode>,
